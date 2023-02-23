@@ -5,7 +5,7 @@ public:
 	Company(string name, int money);
 	~Company();
 
-	int iMoney;
+	unsigned int iMoney;
 	string sCompanyName;
 
 	string GetMoney();
