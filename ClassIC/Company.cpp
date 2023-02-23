@@ -11,3 +11,13 @@ Company::Company(string name,int money)
 Company::~Company()
 {
 }
+
+string Company::GetMoney()
+{
+	return to_string(iMoney) + " ¿ø \n";
+}
+
+string Company::GetCompanyName()
+{
+	return sCompanyName + " È¸»ç \n";
+}

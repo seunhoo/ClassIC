@@ -1,8 +1,8 @@
 #include "inc.h"
 #include "Util.h"
 
-char sCalendarDay[8] = {'일','월','화','수','목','금','토'};
-
+//char sCalendarDay[8] = {'일','월','화','수','목','금','토','\0'};
+vector<string> sCalendarDay{ "일","월","화","수","목","금","토" };
 Util::Util()
 {
 }
@@ -47,11 +47,11 @@ void Util::UpdateDay()
 string Util::GetDayString()
 {
     string sDay = "";
-    sDay = to_string(iCalendarYear) + "년 " + to_string(iCalendarMonth) + "월 " + to_string(iCalendarDay) + "일 " + to_string(GetDay()) + "요일 \n";
+    sDay = to_string(iCalendarYear) + "년 " + to_string(iCalendarMonth) + "월 " + to_string(iCalendarDay) + "일 " + GetDay() + "요일 \n";
 	return sDay;
 }
 
-char Util::GetDay()
+string Util::GetDay()
 {
     return sCalendarDay[iCalendarDay % 7];
 }

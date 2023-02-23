@@ -18,7 +18,7 @@ public:
 	void UpdateDay();
 
 	string GetDayString();
-	char GetDay();
+	string GetDay();
 
 };
 

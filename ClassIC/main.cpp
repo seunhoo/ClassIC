@@ -23,20 +23,21 @@ int main()
 
 	while (cCompany.iMoney > 0)
 	{
-		if (iDayCount == 10)
+		if (iDayCount == 3)
 		{
 			cUtil.UpdateDay();
 			iDayCount = 0;
 		}
 		// 화면 비우는 방법
 		system("cls");
-		// 오늘 날짜 
+
+		// 기본 출력 화면
 		cout << cUtil.GetDayString();
+		cout << cCompany.GetCompanyName();
+		cout << cCompany.GetMoney();
 
 		// 매초 마다 돈 줄어들기
 		cCompany.iMoney--;
-		cout << cCompany.sCompanyName << " 회사\n";
-		cout << "돈: " << cCompany.iMoney;
 
 		iDayCount++;
 		this_thread::sleep_for(chrono::seconds(1));

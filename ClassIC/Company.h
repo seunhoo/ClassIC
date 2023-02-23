@@ -7,8 +7,14 @@ public:
 
 	int iMoney;
 	string sCompanyName;
+
+	string GetMoney();
+	string GetCompanyName();
+
 private:
 	int iBaseMoney;
+
+
 
 
 };
