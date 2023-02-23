@@ -22,6 +22,7 @@ public:
 
 };
 
+string AddComma(int num);
 
 #endif // !__UTIL_H__
 

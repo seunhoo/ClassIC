@@ -7,6 +7,7 @@ void Company_Thread(Company cCompany)
 	Util cUtil;
 	int iDayCount = 0;
 	int iGetAction = 0;
+
 	while (cCompany.GetMoney() > 0)
 	{
 		if (iDayCount >= iCountTime * 3)

@@ -10,6 +10,8 @@
 #include <chrono>
 #include <cstdlib>
 #include <Windows.h>
+#include <locale>
+#include <sstream>
 using namespace std;
 
 #include "ClassIC.h"

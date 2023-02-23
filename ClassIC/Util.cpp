@@ -11,6 +11,16 @@ Util::~Util()
 {
 }
 
+string AddComma(int num)
+{
+    string sNum = std::to_string(num);
+    int iLen = sNum.length();
+    for (int i = iLen - 3; i > 0; i -= 3) {
+        sNum.insert(i, ",");
+    }
+    return sNum;
+}
+
 void Util::UpdateDay()
 {
     int iMaxDay = 0;

@@ -14,7 +14,8 @@ Company::~Company()
 
 string Company::GetMoneyString()
 {
-	return to_string(iMoney) + " ¿ø \n";
+
+	return AddComma(iMoney) + " ¿ø \n";
 }
 
 string Company::GetCompanyName()
