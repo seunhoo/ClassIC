@@ -8,8 +8,11 @@ public:
 	unsigned int iMoney;
 	string sCompanyName;
 
-	string GetMoney();
+	string GetMoneyString();
 	string GetCompanyName();
+
+	unsigned int GetMoney();
+	unsigned int SetMoney(int money);
 
 private:
 	int iBaseMoney;

@@ -7,7 +7,7 @@ void Company_Thread(Company cCompany)
 	Util cUtil;
 	int iDayCount = 0;
 	int iGetAction = 0;
-	while (cCompany.iMoney > 0)
+	while (cCompany.GetMoney() > 0)
 	{
 		if (iDayCount >= iCountTime * 3)
 		{
@@ -20,14 +20,16 @@ void Company_Thread(Company cCompany)
 		// 기본 출력 화면
 		cout << cUtil.GetDayString();
 		cout << cCompany.GetCompanyName();
-		cout << cCompany.GetMoney();
+		cout << cCompany.GetMoneyString();
 
 		// 매초 마다 돈 줄어들기
-		cCompany.iMoney -= iCountTime;
+		cCompany.SetMoney(-iCountTime);
 
 		iDayCount += iCountTime;
 		this_thread::sleep_for(chrono::seconds(iCountTime));
 	}
+	system("cls");
+	cout << "탕진 ! 망했다!\n";
 }
 
 int main()

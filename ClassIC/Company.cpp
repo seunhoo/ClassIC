@@ -12,7 +12,7 @@ Company::~Company()
 {
 }
 
-string Company::GetMoney()
+string Company::GetMoneyString()
 {
 	return to_string(iMoney) + " ¿ø \n";
 }
@@ -20,4 +20,14 @@ string Company::GetMoney()
 string Company::GetCompanyName()
 {
 	return sCompanyName + " È¸»ç \n";
+}
+
+unsigned int Company::GetMoney()
+{
+	return iMoney;
+}
+
+unsigned int Company::SetMoney(int money)
+{
+	return iMoney + money;
 }
